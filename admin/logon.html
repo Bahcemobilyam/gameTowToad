@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>gameTowToad后台管理</title>
+<link href="../include/Css/admin/base.css" rel="stylesheet" type="text/css" />
+<link href="../include/Css/admin/login.css" rel="stylesheet" type="text/css" />
+<script language="javascript" type="text/javascript">
+function refreshcode1(obj,url){
+	obj.src = url+"?nowtime="+Math.random();
+	}
+</script>
+</head>
+<body>
+<div id="login-box">
+   <div class="login-top"><a href="" target="_blank" title="返回网站主页">返回网站主页</a></div>
+   <div class="login-main">
+    <form name="form1" method="post" action="login.php">
+      <dl>
+	   <dt>用户名：</dt>
+	   <dd><input type="text" name="username"/></dd>
+	   <dt>密&nbsp;&nbsp;码：</dt>
+	   <dd><input type="password" class="alltxt" name="password"/></dd>
+	   
+	   <dt>验证码：</dt>
+	   <dd><input id="vdcode" type="text" name="validate" style="text-transform:uppercase;"/>
+	   <img id="vdimgck" align="absmiddle"  alt="看不清？点击更"  style=" cursor:pointer;" onClick="refreshcode1(this,this.src);" src="includes/ckcode.php?ckcode=1&a1" /> </dd>
+		<dt>&nbsp;</dt>
+        <dd style=" position:relative; top:5px;"><button type="submit" name="sm1" class="login-btn" onclick="this.form.submit();">登录</button></dd>
+	 </dl>
+	</form>
+   </div>
+   <div class="login-power">Powered by<strong>北京国信深蓝<?php echo $cfg_version; ?></strong>&copy; 2013-8 <a href="http://www.desdev.cn" target="_blank">trips</a> Inc.</div>
+</div>
+
+</body>
+</html>
